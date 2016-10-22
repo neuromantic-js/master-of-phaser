@@ -9,8 +9,10 @@ let game = new Phaser.Game(
 	Phaser.AUTO,
 	'game'
 );
-let boot = require('game-states/boot');
+let boot = require('game-states/boot'),
+	mainmenu = require('game-states/mainmenu');
 
 // Game States
 game.state.add('Boot', boot.BootGameState);
+game.state.add('MainMenu', mainmenu.MainMenuGameState);
 game.state.start('Boot');
